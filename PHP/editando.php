@@ -1,4 +1,3 @@
-ArrayEnterprises
 <?php
 	include "conexao.php"; //inclui a conexão com o banco de dados.
 
@@ -10,7 +9,7 @@ ArrayEnterprises
 	$updateemail=$_POST['email']; //pega o email do formulário da página anterior.
 	$updatesenha=$_POST['senha']; //pega a senha do formulário da página anterior.
 
-	mysqli_query("UPDATE cadastro SET nome = '$updatenome', email = '$updateemail', senha = '$updatesenha' WHERE (email = '$email' and senha = '$senha')"); //altera os dados no banco de dados.
+	mysqli_query($conecta, "UPDATE cadastro SET nome = '$updatenome', email = '$updateemail', senha = '$updatesenha' WHERE (email = '$email' and senha = '$senha')"); //altera os dados no banco de dados.
 ?>
 <html>
 <head>
