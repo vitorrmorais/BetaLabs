@@ -10,6 +10,7 @@
 <title>ArrayEnterprises</title>
 </head>
 <body link="#09f">
+<p>&nbsp;</p>
 <div id="login">
   <div class="mensagem"> </div>
   <div class="formulario">
@@ -20,7 +21,7 @@
     Ou então, <a href="cadastro.php">cadastre-se</a> agora mesmo.
    </form><br /><br />
   </div>
- </div>
+</div>
 <?php
 	$query = mysqli_query($conecta, "SELECT * FROM mostrar ORDER BY id desc"); //seleciona o banco de dados e coloca em ordem.
 	$row = mysqli_num_rows($query); //faz a contagem para usar na condição.
