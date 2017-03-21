@@ -18,7 +18,7 @@
 </html>
 <?php
 	$email=$_POST['email']; //pega o email digitado no formulário.
-	$senha=$_POST['senha']; //pega a senha digitada no formulário.
+	$senha=md5($_POST['senha']); //pega a senha digitada no formulário.
 	$sql = mysqli_query($conecta, "SELECT * FROM cadastro WHERE email = '$email' and senha = '$senha'"); //compara dados do login com banco de dados.
 	$row = mysqli_num_rows($sql); //faz a contagem para usar na condição.
 	if ($row > 0) { //condição que verifica se os dados de login estão corretos.

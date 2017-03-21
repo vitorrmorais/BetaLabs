@@ -3,7 +3,7 @@
 
 	$nome=$_POST['nome']; //pega o nome do formulário da página anterior.
 	$email=$_POST['email']; //pega o email do formulário da página anterior.
-	$senha=$_POST['senha']; //pega a senha do formulário da página anterior.
+	$senha=md5($_POST['senha']); //pega a senha do formulário da página anterior.
 	
 	mysqli_query($conecta, "INSERT INTO cadastro(nome, email, senha) VALUES('$nome','$email','$senha')"); //envia os dados acima para o banco de dados.
 	
