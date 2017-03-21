@@ -40,5 +40,26 @@
   </form>
 </div>
 <?php echo "<br /><center><h1><font color='#09f'><a href='logout.php'>Sair</a></font></h1></center>" ?>
+<br />
+<div id="comentarios">
+	<?php
+	$query = mysqli_query($conecta, "SELECT * FROM mostrar ORDER BY id desc"); //seleciona o banco de dados e coloca em ordem.
+	$row = mysqli_num_rows($query); //faz a contagem para usar na condição.
+	if ($row > 0) { //verifica se está ok.
+		while ($line = mysqli_fetch_array($query)) {
+			$nome = $line['nome'];
+			$email = $line['email'];
+			$comentario = $line['comentario'];
+			$data = $line['data'];
+			echo "<center><b><font color='#09f'>$nome</font></b></center><br />";
+			echo "<center><font color='#09f'>$email</font></center><br />";
+			echo "<center><i>$comentario</i></center><br />";
+			echo "<center>$data</center><br /><hr />";	
+		}
+	} else {
+		echo "<center><b><font color='#09f'>Ainda não existem comentários. Seja o primeiro a comentar!</font><b></center>";	
+	} 
+?>
+</div>
 </body>
 </html>
