@@ -1,0 +1,80 @@
+*{
+	margin:0;
+	padding:0;
+	outline:none;
+	list-style:none;
+}
+
+body {
+	font: 400 16px PT Sans;
+	color: #09f;
+}
+#login .formulario form {
+	color: #09f;
+}
+
+#login {
+	width:250px;
+	margin:0 auto;
+	position:relative;
+}
+#formulario {
+	margin:0 auto;
+	
+}
+#login label {
+	display: block;
+}
+#formulario label {
+	display: block;	
+}
+.txt {
+	border:none;
+	height:25px;
+	width:250px;
+	border:thin solid #09f;
+}
+.txt2 {
+	border:none;
+	height:70px;
+	width:250px;
+	border:thin solid #09f;
+}
+.formulario {
+	margin:0 auto;
+	width:250;
+}
+.txt:focus {
+	box-shadow:0 2px 16px #09f;
+}
+.bt {
+	display:block;
+	font:400 18px PT Sans;
+	border:none;
+	width:250px;
+	height:30px;
+	position:relative;
+	cursor:pointer;
+
+}
+.bt:hover {
+	background:#09F;
+	color:#fff;	
+}
+	
+.bt:focus {
+	box-shadow:0 2px 16px #09f;
+	-webkit-box-shadow:0 2px 16px #09f;
+	-moz-box-shadow:0 2px 16px #09f;
+}
+.bradius {
+	border-radius: 6px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+}
+.fleft {
+	float:left;
+}
+fright {
+	float:right;
+}
