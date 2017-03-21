@@ -6,7 +6,6 @@
 <link rel="stylesheet" type="text/css" href="css/style.css" />
 <title>ArrayEnterprises</title>
 </head>
-
 <body text="#09f">
 <?php echo "<center><h1><font color='#09f'>Faça seu cadastro!</font></h1></center>" ?>
 <div id="login">
