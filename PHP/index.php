@@ -25,7 +25,7 @@
 	$query = mysqli_query($conecta, "SELECT * FROM mostrar ORDER BY id desc"); //seleciona o banco de dados e coloca em ordem.
 	$row = mysqli_num_rows($query); //faz a contagem para usar na condição.
 	if ($row > 0) { //verifica se está ok.
-		while ($line = mysql_fetch_array($query)) {
+		while ($line = mysqli_fetch_array($query)) {
 			$nome = $line['nome'];
 			$email = $line['email'];
 			$comentario = $line['comentario'];
