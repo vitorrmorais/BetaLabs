@@ -52,12 +52,15 @@
 			$comentario = $line['comentario'];
 			$data = $line['data'];
 			$id = $line['id'];
+			$admin = "admin";
 			echo "<center><b><font color='#09f'>$nome</font></b></center><br />";
 			echo "<center><font color='#09f'>$email</font></center><br />";
 			echo "<center><i>$comentario</i></center><br />";
 			echo "<center>$data</center><br />";
 				if($_SESSION['email'] == $email) {
 					echo "<center><a href='editandocomentario.php?id=$id'>Editar</a> <a href='deletandocomentario.php?id=$id'>Excluir</a></center><br /><hr />";
+				} elseif ($_SESSION['email'] == $admin) {
+					echo "<center><a href='deletandocomentario.php?id=$id'>Excluir</a></center><br /><hr />";
 				} else {
 					echo "<center><hr /></center>";
 				}
