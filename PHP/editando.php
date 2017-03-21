@@ -7,7 +7,7 @@
 
 	$updatenome=$_POST['nome']; //pega o nome do formulário da página anterior.
 	$updateemail=$_POST['email']; //pega o email do formulário da página anterior.
-	$updatesenha=$_POST['senha']; //pega a senha do formulário da página anterior.
+	$updatesenha=md5($_POST['senha']); //pega a senha do formulário da página anterior.
 
 	mysqli_query($conecta, "UPDATE cadastro SET nome = '$updatenome', email = '$updateemail', senha = '$updatesenha' WHERE (email = '$email' and senha = '$senha')"); //altera os dados no banco de dados.
 ?>
