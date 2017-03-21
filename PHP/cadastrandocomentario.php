@@ -10,5 +10,5 @@
 	$data = date('d/m/Y - H:i'); //função para pegar data e hora.
 	mysqli_query ($conecta, "INSERT INTO mostrar(nome, email, comentario, data) VALUES('$nome','$email','$comentario','$data')"); //inclui o comentário no banco de dados do usuário logado. 
 	echo "<center><h1><font color='#09f'>Seu comentário foi adicionado com sucesso.</font></h1></center><br />";
-	echo "<center><h1><font color='#09f'>Clique <a href='index.php'>aqui</a> para ve-lo.</font></center></h1>";
+	echo "<center><h1><font color='#09f'>Clique <a href='painel.php'>aqui</a> para ve-lo.</font></center></h1>";
 ?>
